@@ -3,10 +3,13 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const nextConfig = {
     experimental: {
-    outputFileTracingIncludes: {
-      '/*': ['./src/database.json'],
+      outputFileTracingIncludes: {
+        '/*': ['./src/database.json'],
+      },
     },
-  },
+    images: {
+        domains: ['picsum.photos', 'via.placeholder.com'], // Allow domains
+    },
 };
 
 const analyzerConfig = withBundleAnalyzer({
