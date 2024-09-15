@@ -8,7 +8,9 @@ const nextConfig = {
       },
     },
     images: {
-        domains: ['picsum.photos', 'via.placeholder.com'], // Allow domains
+        remotePatterns: [
+          { hostname: 'via.placeholder.com' },
+        ], // Allow domains
     },
 };
 
