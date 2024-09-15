@@ -1,10 +1,20 @@
 import React from 'react';
 import TimeStamp from '@/components/TimeStamp';
 export const dynamic = 'force-dynamic';
+const timezoneConfig = {
+  timeZone: 'Asia/Kolkata',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+  hour12: true
+}
 
 
 function Home(){
-  const time = new Date().toLocaleString();
+  const time = new Intl.DateTimeFormat('en-US', timezoneConfig).format(new Date());
 
   return (
     <> 
