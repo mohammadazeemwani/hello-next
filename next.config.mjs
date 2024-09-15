@@ -1,7 +1,13 @@
 /** @type {import('next').NextConfig} */
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
-const nextConfig = {};
+const nextConfig = {
+    experimental: {
+    outputFileTracingIncludes: {
+      '/*': ['./src/database.json'],
+    },
+  },
+};
 
 const analyzerConfig = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
