@@ -1,5 +1,8 @@
 import React from 'react';
 import TimeStamp from '@/components/TimeStamp';
+
+export const dynamic = 'force-dynamic';
+
 function Home(){
   // const [time, setTime] = React.useState(null);
   const time = new Date().toLocaleString()
